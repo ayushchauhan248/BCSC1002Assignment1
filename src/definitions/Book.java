@@ -10,4 +10,12 @@ public class Book {
     private String bookName;
     private String authorName;
     private int ISBNNumber;
+
+    public Book(String bookName, String authorName, int ISBNNumber) {
+        this.bookName = bookName;
+        this.authorName = authorName;
+        this.ISBNNumber = ISBNNumber;
+    }
+
+
 }
