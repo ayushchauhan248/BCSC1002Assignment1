@@ -6,6 +6,9 @@
  * */
 package definitions;
 
+import java.util.Arrays;
+import java.util.Objects;
+
 public class Student {
     private String studentName;
     private String firstName;
@@ -73,6 +76,31 @@ public class Student {
         for (Book book : namesOfBooks) {
             System.out.println(book);
         }
+    }
+
+    @Override
+    public String toString() {
+        return String.format(
+                "Student Name: %s, University Rollno: %ld, Books Issued: %d, ",
+                getStudentName(), getUniversityRollno(), getNumberOfBooksIssued());
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return universityRollno == student.universityRollno &&
+                numberOfBooksIssued == student.numberOfBooksIssued &&
+                Objects.equals(studentName, student.studentName) &&
+                Arrays.equals(namesOfBooks, student.namesOfBooks);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(studentName, universityRollno, numberOfBooksIssued);
+        result = 31 * result + Arrays.hashCode(namesOfBooks);
+        return result;
     }
 }
 
