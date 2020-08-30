@@ -71,7 +71,7 @@ public class Student {
      */
     public void listInventory() {
         for (Book book : namesOfBooks) {
-            System.out.println(namesOfBooks);
+            System.out.println(book);
         }
     }
 }
