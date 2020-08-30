@@ -18,7 +18,6 @@ public class Library {
         this.availableBooks[2] = new Book("Aanya", "The Catcher in the Rye", "J.D.Salinger", "3456789012345");
         this.availableBooks[3] = new Book("Siddhi", "1984", "George", "4567890123456");
         this.availableBooks[4] = new Book("Aara", "Animal Farm", "Boris", "567890123456");
-
     }
 
     public Library(Book[] availableBooks) {

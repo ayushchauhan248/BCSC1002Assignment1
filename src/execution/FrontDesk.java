@@ -7,6 +7,7 @@
 package execution;
 
 import definitions.Library;
+import definitions.Student;
 
 import java.util.Scanner;
 
@@ -20,6 +21,7 @@ public class FrontDesk {
         Scanner scanner = new Scanner(System.in);
         int userInput;
         Library myLibrary = new Library();
+        Student myStudent = new Student();
         do {
             System.out.println("-=-=--=-=-\"Welcome To The Front Desk\"-=-=--=-=-");
             System.out.println("How may I help you today?");
@@ -32,12 +34,30 @@ public class FrontDesk {
             String bookName;
             switch (userInput) {
                 case ISSUE_BOOK:
+                    System.out.println("Enter your First name");
+                    String firstName = scanner.next();
+                    System.out.println("Enter your Middle name");
+                    String midddleName = scanner.next();
+                    System.out.println("Enter your last name");
+                    String lastName = scanner.next();
+                    System.out.println("Enter your University Rollno.");
+                    long universityRollno = scanner.nextLong();
+                    myStudent.studentInformation(firstName, midddleName, lastName, universityRollno);
                     System.out.println("Enter the name of the book that you want to issue");
                     scanner.nextLine();
                     bookName = scanner.nextLine();
                     myLibrary.doCheckout(bookName);
                     break;
                 case RETURN_BOOK:
+                    System.out.println("Enter your First name");
+                    String firstNameOfStudent = scanner.next();
+                    System.out.println("Enter your Middle name");
+                    String midddleNameOfStudent = scanner.next();
+                    System.out.println("Enter your last name");
+                    String lastNameOfStudent = scanner.next();
+                    System.out.println("Enter your University Rollno.");
+                    long universityRollnoOfStudent = scanner.nextLong();
+                    myStudent.studentInformationReturn(firstNameOfStudent, midddleNameOfStudent, lastNameOfStudent, universityRollnoOfStudent);
                     System.out.println("Enter the name of the book you want to return");
                     scanner.nextLine();
                     bookName = scanner.nextLine();

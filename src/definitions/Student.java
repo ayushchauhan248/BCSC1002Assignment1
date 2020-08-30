@@ -37,6 +37,30 @@ public class Student {
         }
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
     public String getStudentName() {
         return studentName;
     }
@@ -76,6 +100,32 @@ public class Student {
         for (Book book : namesOfBooks) {
             System.out.println(book);
         }
+    }
+
+    /**
+     * This method prints all the information about student who issues a book.
+     *
+     * @param firstName
+     * @param lastName
+     * @param middleName
+     * @param universityRollno
+     */
+
+    public void studentInformation(String firstName, String middleName, String lastName, long universityRollno) {
+        System.out.println(firstName + " " + middleName + " " + lastName + " " + universityRollno + " " + "issues a book.");
+    }
+
+    /**
+     * This method prints all the information about student who returns a issued a book.
+     *
+     * @param firstName
+     * @param lastName
+     * @param middleName
+     * @param universityRollno
+     */
+
+    public void studentInformationReturn(String firstName, String middleName, String lastName, long universityRollno) {
+        System.out.println(firstName + " " + middleName + " " + lastName + " " + universityRollno + " " + "returns a book.");
     }
 
     @Override
