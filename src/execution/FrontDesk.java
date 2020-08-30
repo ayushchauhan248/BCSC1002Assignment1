@@ -50,6 +50,6 @@ public class FrontDesk {
                 default:
             }
         } while (userInput != EXIT);
-
+        scanner.close();
     }
 }
