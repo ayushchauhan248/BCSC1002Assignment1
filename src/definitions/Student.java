@@ -65,4 +65,14 @@ public class Student {
     public void setNamesOfBooks(Book[] namesOfBooks) {
         this.namesOfBooks = namesOfBooks;
     }
+
+    /**
+     * This method prints all the books (store array).
+     */
+    public void listInventory() {
+        for (Book book : namesOfBooks) {
+            System.out.println(namesOfBooks);
+        }
+    }
 }
+
