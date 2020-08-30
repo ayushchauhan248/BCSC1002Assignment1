@@ -52,4 +52,11 @@ public class Library {
         }
     }
 
+    public Book[] getAvailableBooks() {
+        return availableBooks;
+    }
+
+    public void setAvailableBooks(Book[] availableBooks) {
+        this.availableBooks = availableBooks;
+    }
 }
