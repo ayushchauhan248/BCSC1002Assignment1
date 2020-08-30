@@ -41,4 +41,12 @@ public class Book {
         this.ISBNNumber = ISBNNumber;
     }
 
+    public String toString() {
+        return "Book{" +
+                "bookName='" + bookName + '\'' +
+                ", authorName='" + authorName + '\'' +
+                ", ISBNNumber=" + ISBNNumber +
+                '}';
+    }
+
 }
